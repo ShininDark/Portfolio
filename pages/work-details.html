@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Project — Aashraya</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrap">
+        <a href="../index.html" class="logo">Ash</a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="detail-root" class="container">
+      <p>Loading project…</p>
+    </main>
+
+    <footer>
+      <p>&copy; Aashraya. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const PATHS = { assets: "../", pages: "" };
+    </script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      const id = new URLSearchParams(window.location.search).get("id");
+      const project = PROJECTS.find((p) => p.id === id);
+      const root = document.getElementById("detail-root");
+
+      if (!project) {
+        root.innerHTML = `
+        <p>Project not found.</p>
+        <a href="work.html" class="btn">Back to work</a>
+      `;
+      } else {
+        document.getElementById("page-title").textContent =
+          `${project.title} — Aashraya`;
+
+        const galleryHtml = project.gallery
+          .map(
+            (src) =>
+              `<img src="${PATHS.assets}${src}" alt="${project.title} screenshot" />`,
+          )
+          .join("");
+
+        root.innerHTML = `
+        <section class="detail-hero">
+          <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="work.html">Work</a> / ${project.title}</div>
+          <img src="${PATHS.assets}${project.thumbnail}" alt="${project.title}" />
+          <h1>${project.title}</h1>
+          <p>${project.heroDescription}</p>
+        </section>
+
+        <section class="section">
+          <div class="feature-block">
+            <h3>Gameplay Features</h3>
+            <p>${project.gameplayFeatures}</p>
+          </div>
+          <div class="feature-block">
+            <h3>Challenges and Problem Solving</h3>
+            <p>${project.challenges}</p>
+          </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+          <div class="section-head" style="text-align: left;">
+            <h2>Gallery</h2>
+          </div>
+          <div class="gallery-grid">${galleryHtml}</div>
+        </section>
+
+        <a href="work.html" class="btn">← Back to all work</a>
+      `;
+      }
+    </script>
+  </body>
+</html>
