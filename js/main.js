@@ -38,3 +38,24 @@ window.addEventListener("load", () => {
   if (!pre) return;
   setTimeout(() => pre.classList.add("hidden"), 400);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.getElementById("skills");
+  if (!skillsSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          skillsSection.querySelectorAll(".skill-fill").forEach((bar) => {
+            bar.style.width = bar.dataset.pct + "%";
+          });
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.3 },
+  );
+
+  observer.observe(skillsSection);
+});
