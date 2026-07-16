@@ -1,12 +1,13 @@
 const PROJECTS = [
   {
-    id: "neon-drift",
-    title: "Neon Drift",
+    id: "tiny-town",
+    title: "Tiny Town",
     thumbnail: "assets/projects/game.jpg",
-    shortDescription: "A fast, neon-soaked arcade racer built in Unity.",
+    shortDescription:
+      "A short and fast game of gather resources and build a town.",
     featured: true,
     heroDescription:
-      "Neon Drift is a top-down arcade racer where momentum is the whole game. Every track is built around chaining drifts to keep a combo meter alive.",
+      "Tiny Town is a top-down survival game where the player must gather members, pile up resource points, and build all buildings.",
     gameplayFeatures:
       "A custom drift-and-boost driving model, procedural track lighting that reacts to speed, and a combo system that rewards clean lines over raw speed.",
     challenges:
