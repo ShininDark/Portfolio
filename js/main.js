@@ -36,7 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
   const pre = document.getElementById("preloader");
   if (!pre) return;
-  setTimeout(() => pre.classList.add("hidden"), 400);
+  setTimeout(() => {
+    pre.classList.add("hidden");
+    document.body.classList.add("loaded");
+  }, 300);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
