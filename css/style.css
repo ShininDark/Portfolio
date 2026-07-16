@@ -49,6 +49,10 @@ body {
   line-height: 1.6;
 }
 
+main {
+  width: 100%;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -166,4 +170,68 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+
+#about {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+#about .about-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 70px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: start;
+}
+
+#about h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+#about p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 40px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.skill-track {
+  height: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+  border-radius: 6px;
+}
+
+.skill-pct {
+  text-align: right;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
 }
