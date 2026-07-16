@@ -249,9 +249,15 @@ body.loaded .hero-actions {
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--text);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 .btn-ghost:hover {
+  color: var(--text);
   background: var(--surface);
 }
 
@@ -387,14 +393,7 @@ footer {
   font-size: 13px;
   text-align: center;
 }
-
-#featured-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-.project-card {
+s .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
