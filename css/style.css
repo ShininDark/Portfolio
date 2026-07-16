@@ -359,3 +359,59 @@ footer {
   border-radius: 6px;
   border: 1px solid var(--border);
 }
+
+.contact-hero {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4.4vw, 40px);
+  margin-bottom: 14px;
+}
+
+.contact-hero p {
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 36px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-link span:first-child {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: var(--accent-bright);
+  cursor: pointer;
+  font-size: 13px;
+}

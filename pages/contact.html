@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Aashraya</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrap">
+        <a href="../index.html" class="logo">Ash</a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero container">
+        <h1>Say hi!</h1>
+        <p>
+          Let's start a project together 🤝 Whether it's a job, a collab, or
+          just talking shop about game dev — reach me directly.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:belbaseaashraya@gmail.com">
+            <span>Email</span>
+            <span>belbaseaashraya@gmail.com</span>
+          </a>
+          <a
+            class="contact-link"
+            href="https://github.com/ShininDark"
+            target="_blank"
+            rel="noopener"
+          >
+            <span>GitHub</span>
+            <span>ShininDark</span>
+          </a>
+          <div class="contact-link">
+            <span>Copy email</span>
+            <button class="copy-btn" onclick="copyEmail(this)">Copy</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Aashraya. All rights reserved.</p>
+    </footer>
+
+    <script>
+      function copyEmail(btn) {
+        navigator.clipboard.writeText("belbaseaashraya@gmail.com");
+        const original = btn.textContent;
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = original), 1500);
+      }
+    </script>
+  </body>
+</html>
