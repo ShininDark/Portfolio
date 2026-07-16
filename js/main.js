@@ -1,7 +1,7 @@
 function renderProjectCard(project) {
   return `
-    <a class="project-card" href="pages/work-details.html?id=${project.id}">
-      <img src="${project.thumbnail}" alt="${project.title}" />
+    <a class="project-card" href="${PATHS.pages}work-details.html?id=${project.id}">
+      <img src="${PATHS.assets}${project.thumbnail}" alt="${project.title}" />
       <div class="project-card-body">
         <h3>${project.title}</h3>
         <p>${project.shortDescription}</p>

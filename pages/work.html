@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Work — Aashraya</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrap">
+        <a href="../index.html" class="logo">Ash</a>
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero container">
+      <h1>My Work</h1>
+      <p>These are some of the games I've built over the years.</p>
+    </section>
+
+    <main class="section container">
+      <div id="all-grid" class="project-grid"></div>
+    </main>
+
+    <footer>
+      <p>&copy; Aashraya. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const PATHS = { assets: "../", pages: "" };
+    </script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        renderGrid(document.getElementById("all-grid"), PROJECTS);
+      });
+    </script>
+  </body>
+</html>
+s
