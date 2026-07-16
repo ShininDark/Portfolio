@@ -32,3 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+window.addEventListener("load", () => {
+  const pre = document.getElementById("preloader");
+  if (!pre) return;
+  setTimeout(() => pre.classList.add("hidden"), 400);
+});
