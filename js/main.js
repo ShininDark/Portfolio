@@ -20,3 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const featured = PROJECTS.filter((p) => p.featured);
   renderGrid(grid, featured);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector("nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("open");
+      nav.classList.toggle("open");
+    });
+  }
+});
