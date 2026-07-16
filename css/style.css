@@ -49,10 +49,6 @@ body {
   line-height: 1.6;
 }
 
-main {
-  width: 100%;
-}
-
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -106,13 +102,12 @@ nav a:hover {
 }
 
 main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
+  width: 100%;
 }
 
 #hero {
-  padding: 80px 0 60px;
+  padding-top: 80px;
+  padding-bottom: 60px;
 }
 
 #hero h1 {
@@ -473,10 +468,6 @@ footer {
     display: flex;
   }
 
-  header {
-    position: sticky; /* keep sticky, but now needs relative positioning context for the dropdown */
-  }
-
   .nav-wrap {
     position: relative;
   }
@@ -489,7 +480,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .about-grid {
+  #about .about-grid {
     justify-items: stretch;
   }
 
